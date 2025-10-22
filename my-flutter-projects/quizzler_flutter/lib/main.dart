@@ -13,7 +13,7 @@ class Quizzler extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
+        backgroundColor: Color(0xFFB8BCF4),
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -51,13 +51,11 @@ class _QuizPageState extends State<QuizPage> {
       } else {
         if (userAnswer == correctAnswer) {
           scoreKeeper.add(Icon(Icons.check, color: Colors.green));
-          print("correct");
         } else {
           scoreKeeper.add(Icon(Icons.close, color: Colors.red));
-          print("wrong");
         }
       }
-      
+
       quizBrain.nextQuestion();
     });
   }
@@ -76,7 +74,7 @@ class _QuizPageState extends State<QuizPage> {
               child: Text(
                 quizBrain.getQuestionText(),
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 25.0, color: Colors.white),
+                style: TextStyle(fontSize: 25.0, color: Color(0xFF1B1E2E)),
               ),
             ),
           ),
@@ -87,7 +85,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(15.0),
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Colors.green,
+                backgroundColor: Color(0xFFEFCBAE),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
               ),
               onPressed: () {
@@ -95,7 +93,7 @@ class _QuizPageState extends State<QuizPage> {
               },
               child: Text(
                 'TRUE',
-                style: TextStyle(color: Colors.white, fontSize: 20.0),
+                style: TextStyle(color: Color(0xFF5A6C74), fontSize: 20.0),
               ),
             ),
           ),
@@ -106,7 +104,7 @@ class _QuizPageState extends State<QuizPage> {
             padding: EdgeInsets.all(15.0),
             child: TextButton(
               style: TextButton.styleFrom(
-                backgroundColor: Colors.red,
+                backgroundColor: Color(0xFFD7E8F4),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
               ),
               onPressed: () {
@@ -114,7 +112,7 @@ class _QuizPageState extends State<QuizPage> {
               },
               child: Text(
                 'FALSE',
-                style: TextStyle(color: Colors.white, fontSize: 20.0),
+                style: TextStyle(color: Color(0xFF5A6C74), fontSize: 20.0),
               ),
             ),
           ),

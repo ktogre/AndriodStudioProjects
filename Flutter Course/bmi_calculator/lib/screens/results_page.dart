@@ -1,10 +1,19 @@
-import 'package:bmi_calculator/reusable_card.dart';
+import 'package:bmi_calculator/components/reusable_card.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi_calculator/constants.dart';
-import 'reusable_card_details.dart';
+import 'package:bmi_calculator/components/bottom_button.dart';
 
 class ResultPage extends StatelessWidget {
-  const ResultPage({super.key});
+  const ResultPage({
+    super.key,
+    required this.bmiResult,
+    required this.resultText,
+    required this.interpretation,
+  });
+
+  final String bmiResult;
+  final String resultText;
+  final String interpretation;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +24,11 @@ class ResultPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
-            child: Text('Your Result', style: kResultsPageTitleTextStyle),
+            child: Container(
+              padding: EdgeInsets.all(15.0),
+              alignment: Alignment.bottomLeft,
+              child: Text('Your Result', style: kResultsPageTitleTextStyle),
+            ),
           ),
           Expanded(
             flex: 5,
@@ -25,15 +38,22 @@ class ResultPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text('NORMAL', style: kResultsTextStyle),
-                  Text('20.0', style: kBMITextStyle),
+                  Text(resultText, style: kResultsTextStyle),
+                  Text(bmiResult, style: kBMITextStyle),
                   Text(
-                    'Your BMI result is quite low, you should eat more.',
+                    interpretation,
                     style: kBodyTextStyle,
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),
             ),
+          ),
+          BottomButton(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            buttonTitle: 'RE-CALCULATE',
           ),
         ],
       ),

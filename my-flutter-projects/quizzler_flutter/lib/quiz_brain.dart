@@ -5,58 +5,64 @@ class QuizBrain {
 
   final List<Question> _questionBank = [
     Question(
-      questionText: "Some cats are actually allergic to humans.",
-      questionAnswer: true,
-    ),
-    Question(
-      questionText: "You can lead a cow down stairs but not up stairs.",
-      questionAnswer: false,
-    ),
-    Question(
-      questionText: "Approximately one quarter of human bones are in the feet.",
-      questionAnswer: true,
-    ),
-    Question(questionText: "A slug's blood is green?", questionAnswer: true),
-    Question(
-      questionText: "Buzz Aldrin's mother's maiden name was 'Moon'.",
-      questionAnswer: true,
-    ),
-    Question(
-      questionText: "It is illegal to pee in the Ocean in Portugal.",
+      questionText:
+          "Bitcoin was the first cryptocurrency to implement blockchain technology.",
       questionAnswer: true,
     ),
     Question(
       questionText:
-          "No piece of square dry paper can be folded in half more than 7 times.",
+          "Ethereum uses the Proof of Work consensus mechanism by default in 2025.",
       questionAnswer: false,
     ),
     Question(
       questionText:
-          "In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.",
+          "In Solidity, the 'view' keyword means a function cannot modify the blockchain state.",
       questionAnswer: true,
     ),
     Question(
       questionText:
-          "The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.",
+          "Lionel Messi has won more UEFA Champions League titles than Cristiano Ronaldo.",
       questionAnswer: false,
     ),
     Question(
       questionText:
-          "The total surface area of two human lungs is approximately 70 square metres.",
+          "Web3 refers to a decentralized version of the internet powered by blockchain technology.",
       questionAnswer: true,
     ),
     Question(
-      questionText: "Google was originally called 'Backrub'.",
+      questionText: "The 'E' in DeFi stands for Exchange.",
+      questionAnswer: false,
+    ),
+    Question(
+      questionText: "NFT stands for Non-Fungible Token.",
       questionAnswer: true,
     ),
     Question(
       questionText:
-          "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.",
-      questionAnswer: true,
+          "Flutter applications can only be built for Android and cannot run on iOS.",
+      questionAnswer: false,
     ),
     Question(
       questionText:
-          "In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.",
+          "The total supply of Bitcoin is capped at 21 million coins.",
+      questionAnswer: true,
+    ),
+    Question(
+      questionText: "Vitalik Buterin is the founder of the Solana blockchain.",
+      questionAnswer: false,
+    ),
+    Question(
+      questionText:
+          "The human brain uses more energy than any other organ in the body.",
+      questionAnswer: true,
+    ),
+    Question(
+      questionText: "JavaScript and Java are the same programming language.",
+      questionAnswer: false,
+    ),
+    Question(
+      questionText:
+          "In the Marvel Cinematic Universe, Tony Stark created Ultron.",
       questionAnswer: true,
     ),
   ];
